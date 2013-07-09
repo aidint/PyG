@@ -1,0 +1,10 @@
+import sys
+from PyQt4 import QtGui
+
+class mywid(QtGui.QWidget):
+
+    def __init__(self):
+        super(mywid,self).__init__()
+        self.initUi()
+
+    def initUi(self):
