@@ -13,6 +13,7 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        test.cpp
+    form.cpp
 
-HEADERS  += test.h
+HEADERS  += \
+    form.h
