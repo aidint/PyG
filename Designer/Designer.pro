@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,6 +13,18 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        designer.cpp
+        designer.cpp \
+    pygapp.cpp \
+    tool.cpp \
+    codeeditor.cpp \
+    qpushbutton1.cpp \
+    qlineedit1.cpp \
+    qlabel1.cpp
 
-HEADERS  += designer.h
+HEADERS  += designer.h \
+    pygapp.h \
+    tool.h \
+    codeeditor.h \
+    qpushbutton1.h \
+    qlineedit1.h \
+    qlabel1.h
