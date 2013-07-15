@@ -3,6 +3,7 @@
 QLineEdit1::QLineEdit1(QWidget *parent) :
     QLineEdit(parent)
 {
+    this->type1 = "QLineEdit";
     this->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(ShowContextMenu(QPoint)));
     coder1 = new CodeEditor;
@@ -46,5 +47,5 @@ void QLineEdit1::changecode(){
 
 void QLineEdit1::hide1(){
     hide();
-    emit hided(this->name);
+    emit hided(this->name + " " + this->type1);
 }

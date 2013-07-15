@@ -102,6 +102,7 @@ void pygApp::removed(QString name){
     QMessageBox a;
     a.setText(name + " removed");
     a.exec();
+    objlist["QPushButton"];
 
 }
 

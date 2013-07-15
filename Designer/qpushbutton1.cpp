@@ -3,6 +3,7 @@
 QPushButton1::QPushButton1(QWidget *parent) :
     QPushButton(parent)
 {
+    this->type1 = "QPushButton";
     this->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(ShowContextMenu(QPoint)));
     coder1 = new CodeEditor;
@@ -46,5 +47,5 @@ void QPushButton1::changecode(){
 
 void QPushButton1::hide1(){
     hide();
-    emit hided(this->name);
+    emit hided(this->name + " " + this->type1);
 }

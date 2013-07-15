@@ -3,6 +3,7 @@
 QLabel1::QLabel1(QWidget *parent) :
     QLabel(parent)
 {
+    this->type1 = "QLabel";
     this->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(ShowContextMenu(QPoint)));
     coder1 = new CodeEditor;
@@ -46,5 +47,5 @@ void QLabel1::changecode(){
 
 void QLabel1::hide1(){
     hide();
-    emit hided(this->name);
+    emit hided(this->name + " " + this->type1);
 }

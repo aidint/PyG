@@ -14,7 +14,7 @@ class QPushButton1 : public QPushButton
 
 public:
     QPushButton1(QWidget *parent = 0);
-    QString name,code,type = "QPushButton";
+    QString name,code,type1;
     CodeEditor *coder1;
     void hide1();
 signals:

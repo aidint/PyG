@@ -12,7 +12,7 @@ class QLineEdit1 : public QLineEdit
     Q_OBJECT
 public:
     QLineEdit1(QWidget *parent = 0);
-    QString name,code,type = "QLineEdit";
+    QString name,code,type1;
     CodeEditor *coder1;
     void hide1();
 signals:
