@@ -43,6 +43,7 @@ void QPushButton1::ShowContextMenu(const QPoint& pos) // this is a slot
 
 void QPushButton1::changecode(){
     code = coder1->code;
+    emit codechanged(this->name,this->code);
 }
 
 void QPushButton1::hide1(){

@@ -54,6 +54,7 @@ void pygApp::createobj(int a,int b){
         c->setText(c->name);
         objlist["QPushButton"][c->name] = c;
         connect(c,SIGNAL(hided(QString)),this,SLOT(removed(QString)));
+        connect(c,SIGNAL(codechanged(QString,QString)),this,SLOT(changecodeobj(QString,QString)));
     }
     if(CurrentTool=="QLineEdit"){
         QLineEdit1 *c = new QLineEdit1(this);
@@ -62,6 +63,7 @@ void pygApp::createobj(int a,int b){
         c->name = "line" + QString::number(++names);
         objlist["QLineEdit"][c->name] = c;
         connect(c,SIGNAL(hided(QString)),this,SLOT(removed(QString)));
+        connect(c,SIGNAL(codechanged(QString,QString)),this,SLOT(changecodeobj(QString,QString)));
     }
     if(CurrentTool=="QLabel"){
         QLabel1 *c = new QLabel1(this);
@@ -72,6 +74,7 @@ void pygApp::createobj(int a,int b){
         c->setFrameStyle(1);
         objlist["QLabel"][c->name] = c;
         connect(c,SIGNAL(hided(QString)),this,SLOT(removed(QString)));
+        connect(c,SIGNAL(codechanged(QString,QString)),this,SLOT(changecodeobj(QString,QString)));
     }
 }
 
@@ -98,12 +101,13 @@ void pygApp::changecode(){
 }
 
 void pygApp::removed(QString name){
+    QStringList b = name.split(QRegExp("(\\ )"));
 
-    QMessageBox a;
-    a.setText(name + " removed");
-    a.exec();
-    objlist["QPushButton"];
+    objlist[b[1]].remove(b[0]);
+}
 
+void pygApp::changecodeobj(QString name,QString code){
+    codes[name] = code;
 }
 
 /**/

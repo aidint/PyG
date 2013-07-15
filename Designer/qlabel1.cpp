@@ -42,6 +42,8 @@ void QLabel1::ShowContextMenu(const QPoint& pos) // this is a slot
 
 void QLabel1::changecode(){
     code = coder1->code;
+    emit codechanged(this->name,this->code);
+
 }
 
 

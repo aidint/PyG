@@ -30,6 +30,7 @@ public:
 public slots:
     void ShowContextMenu(const QPoint & pos);
     void changecode();
+    void changecodeobj(QString name,QString code);
     void removed(QString name);
 };
 

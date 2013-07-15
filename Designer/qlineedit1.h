@@ -17,6 +17,7 @@ public:
     void hide1();
 signals:
     void hided(QString);
+    void codechanged(QString,QString);
 public slots:
     void ShowContextMenu(const QPoint& pos);
     void changecode();

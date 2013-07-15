@@ -42,6 +42,7 @@ void QLineEdit1::ShowContextMenu(const QPoint& pos) // this is a slot
 
 void QLineEdit1::changecode(){
     code = coder1->code;
+    emit codechanged(this->name,this->code);
 }
 
 
