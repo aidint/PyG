@@ -30,6 +30,7 @@ public:
 public slots:
     void ShowContextMenu(const QPoint & pos);
     void changecode();
+    void removed(QString name);
 };
 
 #endif // PYGAPP_H

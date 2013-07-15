@@ -14,10 +14,11 @@ class QPushButton1 : public QPushButton
 
 public:
     QPushButton1(QWidget *parent = 0);
-    QString name,code;
+    QString name,code,type = "QPushButton";
     CodeEditor *coder1;
+    void hide1();
 signals:
-    
+    void hided(QString);
 public slots:
     void ShowContextMenu(const QPoint& pos);
     void changecode();

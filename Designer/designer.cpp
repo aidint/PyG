@@ -3,20 +3,31 @@
 Designer::Designer(QWidget *parent)
     : QMainWindow(parent)
 {
+    this->resize(600,544);
     numbers = 0;
     setWindowTitle("PyG Designer");
     area = new QMdiArea(this);
     setCentralWidget(area);
+
+
+
+
     menu1 = menuBar()->addMenu("&File");
     QAction *save = new QAction("&Save", this);
     connect(save,SIGNAL(triggered()),this,SLOT(save()));
+
     menu1->addAction(save);
+
+
+
+
+
 
     createchild();
     tool = new Tool;
     tool->setWindowTitle("Objects");
     QMdiSubWindow* subWindow = area->addSubWindow(tool);
-    subWindow->setGeometry(0,0,190,this->height());
+    subWindow->setGeometry(0,0,190,520);
     app1->tool = tool;
 
 }

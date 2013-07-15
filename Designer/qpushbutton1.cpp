@@ -23,7 +23,7 @@ void QPushButton1::ShowContextMenu(const QPoint& pos) // this is a slot
     if (selectedItem)
     {
         if(selectedItem->text() == "Remove"){
-            this->hide();
+            this->hide1();
         }
         if(selectedItem->text() == "Name"){
             QMessageBox v;
@@ -42,4 +42,9 @@ void QPushButton1::ShowContextMenu(const QPoint& pos) // this is a slot
 
 void QPushButton1::changecode(){
     code = coder1->code;
+}
+
+void QPushButton1::hide1(){
+    hide();
+    emit hided(this->name);
 }

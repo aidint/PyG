@@ -29,7 +29,10 @@ public:
 
 public slots:
     void save(){
-        QMessageBox
+        QMessageBox a;
+        int b = app1->objlist["QPushButton"]["push1"]->x();
+        a.setText(QString::number(b));
+        a.exec();
     }
 
 };
