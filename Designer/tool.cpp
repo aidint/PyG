@@ -1,7 +1,9 @@
 #include "tool.h"
 #include <QEvent>
+#include <QIcon>
 Tool::Tool()
 {
+
     QVBoxLayout *lay = new QVBoxLayout(this);
     QStringList list;
     list << "QPushButton" << "QLineEdit" << "QLabel";

@@ -18,7 +18,8 @@ void QLineEdit1::ShowContextMenu(const QPoint& pos) // this is a slot
     QMenu myMenu;
     myMenu.addAction("Remove");
     myMenu.addAction("Name");
-    myMenu.addAction("Change Code");
+    //myMenu.addAction("Change Code");
+    myMenu.addAction("Change Text");
     QAction* selectedItem = myMenu.exec(globalPos);
     if (selectedItem)
     {
@@ -35,6 +36,12 @@ void QLineEdit1::ShowContextMenu(const QPoint& pos) // this is a slot
             coder1->setPlainText(code);
             coder1->show();
 
+        }
+        if(selectedItem->text() == "Change Text"){
+            QString text = QInputDialog::getText(this,"Text","Enter your proper text:",QLineEdit::Normal,text1);
+            this->setText(text);
+            text1 = text;
+            emit textchanged(text,this->name);
         }
     }
 

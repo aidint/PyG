@@ -4,7 +4,7 @@
 
 #include <QPlainTextEdit>
 #include <QObject>
-
+#include <QInputDialog>
 QT_BEGIN_NAMESPACE
 class QPaintEvent;
 class QResizeEvent;

@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     codeeditor.cpp \
     qpushbutton1.cpp \
     qlineedit1.cpp \
-    qlabel1.cpp
+    qlabel1.cpp \
+    compiler.cpp
 
 HEADERS  += designer.h \
     pygapp.h \
@@ -27,4 +28,5 @@ HEADERS  += designer.h \
     codeeditor.h \
     qpushbutton1.h \
     qlineedit1.h \
-    qlabel1.h
+    qlabel1.h \
+    compiler.h

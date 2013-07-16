@@ -12,12 +12,13 @@ class QLineEdit1 : public QLineEdit
     Q_OBJECT
 public:
     QLineEdit1(QWidget *parent = 0);
-    QString name,code,type1;
+    QString name,code,type1,text1;
     CodeEditor *coder1;
     void hide1();
 signals:
     void hided(QString);
     void codechanged(QString,QString);
+    void textchanged(QString,QString);
 public slots:
     void ShowContextMenu(const QPoint& pos);
     void changecode();

@@ -13,13 +13,20 @@
 #include <QPushButton>
 #include <QtSql>
 #include <QMessageBox>
+#include <QFileDialog>
+#include <QFile>
+#include <QProgressBar>
+#include <QIcon>
 class Designer : public QMainWindow
 {
     Q_OBJECT
     QMdiArea *area;
-    QMenu *menu1;
+    QMenu *menu1,*menu2;
     int x,y;
     int numbers;
+    bool saved;
+    QString pygdbfile;
+    QString eodbfile;
 public:
     Designer(QWidget *parent = 0);
     ~Designer();
@@ -28,12 +35,8 @@ public:
     pygApp *app1;
 
 public slots:
-    void save(){
-        QMessageBox a;
-        int b = app1->objlist["QPushButton"]["push1"]->x();
-        a.setText(QString::number(b));
-        a.exec();
-    }
+    void save();
+    void compile();
 
 };
 
